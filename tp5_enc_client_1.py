@@ -20,7 +20,7 @@ if match:
     if -1048575 <= nombre1 <= 1048575 and -1048575 <= nombre2 <= 1048575:
         print(f"Expression valide : {nombre1} {operateur} {nombre2}")
         encoded_msg = msg.encode('utf-8')
-        print(f"{encoded_msg}")
+        print(f"yo {encoded_msg}")
     else:
         print("Erreur : Les nombres doivent être entre -1048575 et +1048575.")
 else:
