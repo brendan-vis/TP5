@@ -24,7 +24,7 @@ while True:
         data = data.decode().strip()
 
         # Evaluation et envoi du résultat
-        res = eval(data)
+        res = eval("3+3")
         conn.send(str(res).encode())
     except socket.error:
         print("Error Occured.")
