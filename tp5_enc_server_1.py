@@ -15,6 +15,7 @@ while True:
         if not data: break
         
         print(f"Données reçues du client : {data}")
+        conn.send("Hello".encode())
 
         # On reçoit le calcul du client
         data = conn.recv(2)
