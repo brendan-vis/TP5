@@ -24,7 +24,6 @@ while True:
         data = str(data.decode().strip())
 
         print(f"data |{data}|")
-        data = conn.recv(data)
 
         # Evaluation et envoi du résultat
         res = eval(data)
