@@ -21,7 +21,7 @@ while True:
         data = conn.recv(1024)
         print(f"data rcv {data.decode()}")
 
-        data = data.decode().strip()
+        data = str(data.decode().strip())
 
         print(f"data |{data}|")
 
