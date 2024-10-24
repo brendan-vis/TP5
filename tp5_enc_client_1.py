@@ -21,19 +21,19 @@ if match:
     if -1048575 <= nombre1 <= 1048575 and -1048575 <= nombre2 <= 1048575:
         print(f"Expression valide : {nombre1} {operateur} {nombre2}")
         encoded_msg = msg.encode('utf-8')
-        print(f"{encoded_msg}")
+        print(f"encode {encoded_msg}")
 
         # on calcule sa taille, en nombre d'octets
         msg_len = len(encoded_msg)
-        print(f"{msg_len}")
+        print(f"len {msg_len}")
 
         # on encode ce nombre d'octets sur une taille fixe de 4 octets
         header = msg_len.to_bytes(2, byteorder='big')
-        print(f"{header}")
+        print(f"len byte {header}")
         
         # on peut concaténer ce header avec le message, avant d'envoyer sur le réseau
         payload = header + encoded_msg
-        print(f"{payload}")
+        print(f"concat {payload}")
 
         # on peut envoyer ça sur le réseau
         s.send(payload)
