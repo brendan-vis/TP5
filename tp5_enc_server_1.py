@@ -21,8 +21,10 @@ while True:
         data = conn.recv(1024)
         print(f"data rcv {data.decode()}")
 
+        data = data.decode().strip()
+
         # Evaluation et envoi du résultat
-        res = eval(data.decode())
+        res = eval(data)
         conn.send(str(res).encode())
     except socket.error:
         print("Error Occured.")
