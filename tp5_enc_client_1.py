@@ -37,9 +37,6 @@ if match:
 else:
     print("Erreur : Format incorrect. Utilisez la forme 'x opérateur y' avec +, -, ou *.")
 
-# On envoie
-s.send(msg.encode())
-
 # Réception et affichage du résultat
 s_data = s.recv(1024)
 print(s_data.decode())
