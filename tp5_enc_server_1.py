@@ -15,15 +15,14 @@ while True:
         if not data: break
         
         print(f"Données reçues du client : {data}")
-        conn.send("Hello".encode())
 
         # On reçoit le calcul du client
         data = conn.recv(2)
-        # print(f"data rcv {data.decode()}")
+        print(f"data rcv {data.decode()}")
 
         data = str(data.decode().strip())
 
-        # print(f"data |{data}|")
+        print(f"data |{data}|")
 
         # Evaluation et envoi du résultat
         res = eval(data)
