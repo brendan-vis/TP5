@@ -11,6 +11,7 @@ while True:
 
     try:
         data = conn.recv(2)
+        print(data)
         print(f"data rcv {data.decode()}")
 
         data = str(data.decode().strip())
