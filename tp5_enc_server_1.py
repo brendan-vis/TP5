@@ -12,7 +12,7 @@ while True:
     try:
         data = conn.recv(2)
         if not data:break
-        print(data)
+        print(data.decode())
         print(f"data rcv {data.decode()}")
 
         data = str(data.decode().strip())
