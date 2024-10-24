@@ -18,13 +18,12 @@ while True:
         conn.send("Hello".encode())
 
         # On reçoit le calcul du client
-        
+        data = conn.recv(1024)
         print(f"data rcv {data.decode()}")
 
         # Evaluation et envoi du résultat
-        res  = eval(data.decode().strip())
+        res  = eval(data.decode())
         conn.send(str(res).encode())
-         
     except socket.error:
         print("Error Occured.")
         break
