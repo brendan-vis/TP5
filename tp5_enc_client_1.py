@@ -31,7 +31,7 @@ if match:
         payload = header + encoded_msg
 
         # on peut envoyer ça sur le réseau
-        s.send(payload)
+        # s.send(payload)
     else:
         print("Erreur : Les nombres doivent être entre -1048575 et +1048575.")
 else:
