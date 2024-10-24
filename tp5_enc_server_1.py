@@ -11,6 +11,7 @@ while True:
 
     try:
         data = conn.recv(2)
+        if not data:break
         print(data)
         print(f"data rcv {data.decode()}")
 
