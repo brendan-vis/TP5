@@ -2,7 +2,8 @@ import socket
 import re
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('10.1.1.11', 13337))
+# s.connect(('10.1.1.11', 13337))
+s.connect(('10.33.73.98', 13337))
 
 # Récupération d'une string utilisateur
 msg = input("Calcul à envoyer: ")
@@ -32,6 +33,7 @@ if match:
 
         # on peut envoyer ça sur le réseau
         s.send(payload)
+        s.send("<clafin>".encode())
     else:
         print("Erreur : Les nombres doivent être entre -1048575 et +1048575.")
 else:
